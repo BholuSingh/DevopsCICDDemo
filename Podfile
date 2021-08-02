@@ -6,8 +6,7 @@ target 'RetirementCalculator' do
   use_frameworks!
 
   # Pods for RetirementCalculator
-  pod 'AppCenter/Analytics'
-  pod 'AppCenter/Crashes'
+  pod 'AppCenter'
 
   target 'RetirementCalculatorTests' do
     inherit! :search_paths
