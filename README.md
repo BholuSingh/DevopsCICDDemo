@@ -1,4 +1,5 @@
-# DevopsCICDDemo# DevopsCICDDemo
+
+# DevopsCICDDemo
 
 iOS Project for the CI/CD iOS course by Rajan Singh
 
