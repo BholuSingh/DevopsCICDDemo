@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         
         Analytics.trackEvent("navigated_to_calculator")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+    }
 
     @IBAction func calculateButton_TouchUpInside(_ sender: Any) {
 //         Crashes.generateTestCrash()
