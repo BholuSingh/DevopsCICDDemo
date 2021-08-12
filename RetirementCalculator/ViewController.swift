@@ -46,10 +46,10 @@ class ViewController: UIViewController {
         let current_savings : Float? = Float(savingsTextField.text!)
         let interest_rate : Float? = Float(interestRateTextField.text!)
         
-        resultLabel.text = "If you save $\(monthly_investment!) every month for \(planned_retirement_age! - current_age!) years, and invest that money plus your current investment of $\(current_savings!) at a \(interest_rate!)% anual interest rate, you will have $X by the time you are \(planned_retirement_age!)"
+        resultLabel.text = "If you save $\(monthly_investment ?? 0) every month for \((planned_retirement_age ?? 0) - (current_age ?? 0)) years, and invest that money plus your current investment of $\(current_savings ?? 0) at a \(interest_rate ?? 0)% anual interest rate, you will have $X by the time you are \(planned_retirement_age ?? 0)"
         
-        let properties = ["current_age": String(current_age!),
-                          "planned_retirement_age": String(planned_retirement_age!)]
+        let properties = ["current_age": String(current_age ?? 0),
+                          "planned_retirement_age": String(planned_retirement_age ?? 0)]
         
         Analytics.trackEvent("calculate_retirement_amount", withProperties: properties)
     }
